@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="matcha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAOMI Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="stylesheet" href="css/theme.css">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-brand);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .legal-nav {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      background-color: var(--bg-dashboard);
+      border-bottom: 1px solid var(--border-panel);
+    }
+
+    .legal-nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .legal-nav-brand img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .legal-nav-back {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background-color 0.15s ease;
+    }
+
+    .legal-nav-back:hover {
+      background-color: var(--bg-panel-hover);
+    }
+
+    .legal-container {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 64px 24px;
+      flex: 1;
+    }
+
+    .legal-header {
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-panel);
+    }
+
+    .legal-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 8px 0;
+    }
+
+    .legal-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .legal-section {
+      margin-bottom: 28px;
+    }
+
+    .legal-section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin: 24px 0 12px 0;
+    }
+
+    .legal-section p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0 0 12px 0;
+    }
+
+    .legal-section ul {
+      margin: 0 0 16px 20px;
+      padding: 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .legal-section li {
+      margin-bottom: 8px;
+    }
+
+    .legal-callout {
+      padding: 16px;
+      background-color: var(--bg-panel-inner);
+      border-left: 3px solid var(--color-primary);
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .legal-callout p {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 13px;
+    }
+
+    .legal-footer {
+      border-top: 1px solid var(--border-panel);
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      background-color: var(--bg-dashboard);
+    }
+
+    .legal-footer a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .legal-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav class="legal-nav">
+    <a href="/" class="legal-nav-brand">
+      <img src="assets/icon.svg" alt="Logo">
+      <span>HAOMI Studio</span>
+    </a>
+    <a href="/" class="legal-nav-back">&larr; Back to Studio</a>
+  </nav>
+
+  <main class="legal-container">
+    <header class="legal-header">
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-meta">Last updated: September 11, 2026 • Effective immediately</p>
+    </header>
+
+    <div class="legal-section">
+      <h2>1. Overview</h2>
+      <p>HAOMI Studio ("we", "our", or "the app") is a web-based motion graphics, animation, and video editing tool developed by Cutefish. We are committed to protecting your privacy. HAOMI Studio operates with a client-first, privacy-respecting architecture.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Data Collection & Local Processing</h2>
+      <p>By default, HAOMI Studio processes your animations, layers, keyframes, effects, and media files <strong>entirely within your web browser</strong> using client-side technologies (HTML5 Canvas, Web Audio API, and IndexedDB). Your local projects stay on your physical device.</p>
+      <p><strong>Public Link Sharing:</strong> When you explicitly choose to share a project via the "Share as Link" feature, the project data and assets are uploaded and stored in our database to generate a public shareable link. We do not catalog, sell, or inspect your creative work for advertising or profiling.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Local Storage & Session Data</h2>
+      <p>The app uses browser storage (<code>localStorage</code> and <code>IndexedDB</code>) strictly for application functionality, such as:</p>
+      <ul>
+        <li>Preserving project compositions, layers, and keyframe timelines locally.</li>
+        <li>Remembering your active editor settings and theme preferences.</li>
+        <li>Caching project states for complete offline resilience.</li>
+      </ul>
+      <p>This data remains on your physical device and is never transmitted to any marketing or analytics platforms.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Information Sharing and Disclosure</h2>
+      <p>We do not sell, rent, trade, or monetize your creative projects or user data. Projects uploaded via the "Share as Link" feature are accessible only to anyone who has access to the generated share link or QR code.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Data Deletion and Storage Management</h2>
+      <p>You have full control over your data at all times:</p>
+      <ul>
+        <li><strong>Deleting Local Projects:</strong> You can delete any project directly inside HAOMI Studio using the Project Manager.</li>
+        <li><strong>Clearing Storage:</strong> Clearing your browser's site data, cache, or IndexedDB permanently removes all locally stored project files and preferences from your device.</li>
+        <li><strong>Uploaded Share Links:</strong> Projects that have been uploaded and converted into a public share link cannot be deleted directly by the user once published. If you need an uploaded project link deleted or removed, please submit a removal request via the <strong>Feedback</strong> button in the application or contact the developer directly.</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Contact Information</h2>
+      <p>If you have any questions, inquiries, or feedback regarding this Privacy Policy or your data, please contact the developer at:</p>
+      <ul>
+        <li><strong>Developer:</strong> Cutefish AEP</li>
+        <li><strong>Email:</strong> <a href="mailto:xMSHaomi@gmail.com" style="color: var(--color-primary);">xMSHaomi@gmail.com</a></li>
+        <li><strong>Repository:</strong> <a href="https://github.com/xMSHaomi/HAOMI-Studio" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary);">github.com/xMSHaomi/HAOMI-Studio</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 HAOMI Studio • <a href="terms.html">Terms of Service</a></p>
+  </footer>
+</body>
+</html>

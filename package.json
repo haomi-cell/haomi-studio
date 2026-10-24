@@ -1,0 +1,46 @@
+{
+  "name": "openhaomi-studio",
+  "version": "0.5.132",
+  "description": "Professional lightweight browser-based motion graphics video editor in the browser",
+  "main": "js/main.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node scripts/sync-effects.js",
+    "tunnel": "node server.js --tunnel",
+    "bump": "node scripts/sync-version.js",
+    "version:sync": "node scripts/sync-version.js",
+    "sync:effects": "node scripts/sync-effects.js",
+    "prepare:wrangler": "node scripts/prepare-wrangler.js",
+    "deploy": "node scripts/prepare-wrangler.js && npx wrangler deploy",
+    "serve": "npx serve .",
+    "test": "node scripts/test-suite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cutefishaep/HAOMI-Studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cutefishaep/HAOMI-Studio/issues"
+  },
+  "homepage": "https://github.com/cutefishaep/HAOMI-Studio#readme",
+  "keywords": [
+    "motion-graphics",
+    "video-editor",
+    "webcodecs",
+    "openhaomi",
+    "nle",
+    "animation",
+    "canvas",
+    "keyframing"
+  ],
+  "author": "FishTool Studio Team",
+  "license": "MIT",
+  "dependencies": {
+    "mp4-muxer": "^5.2.2"
+  },
+  "devDependencies": {
+    "acorn": "^8.14.0",
+    "acorn-walk": "^8.3.4"
+  }
+}
