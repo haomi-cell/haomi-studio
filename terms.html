@@ -1,203 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="matcha">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Terms of Service - HAOMI Studio</title>
-  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
-  <link rel="stylesheet" href="css/theme.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/layout.css" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      user-select: text;
-      -webkit-user-select: text;
-    }
-
     body {
+      background-color: var(--bg-canvas, #050507);
+      color: var(--text-primary, #ffffff);
+      font-family: var(--font-brand, sans-serif);
       margin: 0;
       padding: 0;
-      background-color: var(--bg-canvas);
-      color: var(--text-primary);
-      font-family: var(--font-brand);
-      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-    }
-
-    .legal-nav {
-      height: 56px;
-      display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-      background-color: var(--bg-dashboard);
-      border-bottom: 1px solid var(--border-panel);
+      justify-content: flex-start;
+      box-sizing: border-box;
     }
-
-    .legal-nav-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-    }
-
-    .legal-nav-brand img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .legal-nav-back {
-      color: var(--color-primary);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 6px 12px;
-      border-radius: 8px;
-      transition: background-color 0.15s ease;
-    }
-
-    .legal-nav-back:hover {
-      background-color: var(--bg-panel-hover);
-    }
-
     .legal-container {
-      max-width: 780px;
       width: 100%;
-      margin: 0 auto;
-      padding: 36px 24px 64px 24px;
-      flex: 1;
+      max-width: 760px;
+      padding: 48px 24px 80px;
+      box-sizing: border-box;
     }
-
     .legal-header {
       margin-bottom: 32px;
+      border-bottom: 1px solid var(--border-panel, rgba(255, 255, 255, 0.14));
       padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-panel);
     }
-
-    .legal-title {
+    .legal-header h1 {
       font-size: 28px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin: 0 0 8px 0;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
     }
-
-    .legal-meta {
+    .legal-header p {
+      color: var(--text-muted, #a1a1aa);
       font-size: 13px;
-      color: var(--text-muted);
       margin: 0;
     }
-
     .legal-section {
       margin-bottom: 28px;
     }
-
     .legal-section h2 {
       font-size: 18px;
-      font-weight: 700;
-      color: var(--color-primary);
-      margin: 24px 0 12px 0;
+      margin: 0 0 10px;
+      color: var(--text-primary, #ffffff);
     }
-
-    .legal-section p {
+    .legal-section p, .legal-section li {
       font-size: 14px;
-      color: var(--text-secondary);
-      margin: 0 0 12px 0;
+      line-height: 1.6;
+      color: var(--text-secondary, #e4e4e7);
+      margin: 0 0 12px;
     }
-
     .legal-section ul {
-      margin: 0 0 16px 20px;
-      padding: 0;
-      color: var(--text-secondary);
-      font-size: 14px;
+      padding-left: 20px;
+      margin: 0 0 12px;
     }
-
-    .legal-section li {
-      margin-bottom: 8px;
-    }
-
-    .legal-footer {
-      border-top: 1px solid var(--border-panel);
-      padding: 24px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-muted);
-      background-color: var(--bg-dashboard);
-    }
-
-    .legal-footer a {
-      color: var(--color-primary);
+    .legal-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-primary, #ffffff);
       text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: background 0.2s ease;
     }
-
-    .legal-footer a:hover {
-      text-decoration: underline;
+    .legal-back-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
     }
   </style>
 </head>
 <body>
-  <nav class="legal-nav">
-    <a href="/" class="legal-nav-brand">
-      <img src="assets/icon.svg" alt="Logo">
-      <span>HAOMI Studio</span>
+  <div class="legal-container">
+    <a href="index.html" class="legal-back-btn">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+      </svg>
+      Back to Studio
     </a>
-    <a href="/" class="legal-nav-back">&larr; Back to Studio</a>
-  </nav>
 
-  <main class="legal-container">
-    <header class="legal-header">
-      <h1 class="legal-title">Terms of Service</h1>
-      <p class="legal-meta">Last updated: September 11, 2026 • Effective immediately</p>
-    </header>
+    <div class="legal-header">
+      <h1>Terms of Service</h1>
+      <p>Effective Date: October 2026 &bull; HAOMI Studio</p>
+    </div>
 
     <div class="legal-section">
       <h2>1. Acceptance of Terms</h2>
-      <p>By accessing or using HAOMI Studio ("the service" or "the application"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+      <p>
+        By accessing or using HAOMI Studio, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may discontinue use of the platform.
+      </p>
     </div>
 
     <div class="legal-section">
-      <h2>2. Description of Service</h2>
-      <p>HAOMI Studio is a web-based motion graphics and video editing application. It enables creators to design animations, manipulate timeline keyframes, apply modular visual effects, and render video or project packages directly inside their web browser.</p>
+      <h2>2. Software License &amp; Open Source</h2>
+      <p>
+        HAOMI Studio is provided under the terms of the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the conditions outlined in the repository license.
+      </p>
     </div>
 
     <div class="legal-section">
-      <h2>3. Intellectual Property & User Ownership</h2>
-      <p>You retain 100% full ownership, copyright, and intellectual property rights over all animations, project files, graphics, audio, and video content that you create, import, or export using HAOMI Studio.</p>
-      <p>HAOMI Studio claims no ownership or license over your personal creative work.</p>
+      <h2>3. User Content &amp; Intellectual Property</h2>
+      <p>
+        You retain all copyright and intellectual property rights in the videos, audio, images, motion graphics, and project files you create or edit using HAOMI Studio. HAOMI Studio claims no ownership over your creations.
+      </p>
     </div>
 
     <div class="legal-section">
-      <h2>4. Public Project Links & Sharing</h2>
-      <p>When you generate a public share link for a project, the project data is uploaded and made accessible so anyone with the link can import and view it. <strong>Projects uploaded to create a public link cannot be deleted or undone directly by the user once generated.</strong></p>
-      <p>If you wish to have an uploaded project link permanently removed or taken down, please submit a deletion request via the <strong>Feedback</strong> button in the application or contact the developer directly.</p>
+      <h2>4. Disclaimer of Warranties</h2>
+      <p>
+        HAOMI Studio is distributed on an &ldquo;AS IS&rdquo; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. In no event shall the authors or copyright holders be liable for any claim, damages or other liability arising from your use of the software.
+      </p>
     </div>
 
     <div class="legal-section">
-      <h2>5. Disclaimer of Warranties</h2>
-      <p>HAOMI Studio is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied. While we strive for maximum performance, stability, and reliability, we do not guarantee that the service will always be error-free or uninterrupted.</p>
+      <h2>5. Updates &amp; Modifications</h2>
+      <p>
+        We reserve the right to modify or replace these terms at any time. Changes will be reflected with an updated effective date.
+      </p>
     </div>
-
-    <div class="legal-section">
-      <h2>6. Limitation of Liability</h2>
-      <p>In no event shall HAOMI Studio or its developers be liable for any indirect, incidental, special, or consequential damages arising from the use of or inability to use the application or any loss of project data.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>7. Modifications & Contact</h2>
-      <p>We may update these terms occasionally. Continued use of HAOMI Studio following any updates constitutes acceptance of the modified terms.</p>
-      <p>For questions or inquiries regarding these Terms of Service, please reach out to:</p>
-      <ul>
-        <li><strong>Developer:</strong> Cutefish AEP</li>
-        <li><strong>Email:</strong> <a href="mailto:xMSHaomi@gmail.com" style="color: var(--color-primary);">xMSHaomi@gmail.com</a></li>
-      </ul>
-    </div>
-  </main>
-
-  <footer class="legal-footer">
-    <p>&copy; 2026 HAOMI Studio • <a href="privacy.html">Privacy Policy</a></p>
-  </footer>
+  </div>
 </body>
 </html>
